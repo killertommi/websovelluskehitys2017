@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Tehtava B validointi</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">  <!--Teht b-->
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+    <h1>Lomakkeen validointi HTML5</h1>
+
+    <form>
+        <section class="infokentta"><h3>Info</h3>Täytä pakolliset kentät<span style="color:red;">*</span> huolellisesti, ja paina <b>"Lähetä"</b>, kun olet valmis.</section>
+        <br>
+        <p class="kentta">Etunimi<span style="color:red;">*</span>:</p>
+        <input class="kentta" type="text" name="etunimi" title="Etunimesi" required/>
+
+        <p class="kentta">Sukunimi<span style="color:red;">*</span>:</p>
+        <input class="kentta" type="text" name="sukunimi"  title="Sukunimesi" required/>
+
+        <p class="kentta">Sähköposti<span style="color:red;">*</span>:</p>
+        <input class="kentta" type="email" name="sukunimi"  title="Sähköposti" required/>
+
+        <p class="kentta">Puhelin:</p>
+        <input class="kentta" type="tel" name="sukunimi" placeholder="Esim: +3585052..."  title="Puhelinnumero" />
+
+        <p class="kentta">Osoite:</p>
+        <input class="kentta" type="text" name="osoite"  title="Osoitteesi" />
+
+        <p class="kentta">Postinumero:</p>
+        <input class="kentta" type="text" name="postinumero" pattern=".{5}"  title="Postinumero" />
+
+        <p class="kentta">Salasana<span style="color:red;">*</span>:</p>
+
+        <input class="kentta" type="password" name="pw" pattern=".{6,}" title="Salasanasi" required/>
+        <br><hr><br>
+        <input class="laheta" type="submit" value="Lähetä"/>
+        <br><br>
+    </form>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
