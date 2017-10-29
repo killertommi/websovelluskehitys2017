@@ -40,7 +40,7 @@ const checkAttribute = (attr, elements, func) => {
 };
 
 const checkEmpty = (el) => {
-    colsole.log(el.value);
+    console.log(el.value);
     if(el.value === '') {
       el.setAttribute('style', 'border: 1px solid red');   //pakolliset punaiseks
       lomakeOK += '0';   //
