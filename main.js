@@ -15,7 +15,7 @@
 //luodaan funktio
 //const piilotaElementti = (evt) ==> {
  //   testi.setAttribute('class', 'hidden');
-    
+
 //}
                                            //muokataan attribuutteja, nyt luokkaa
                                             //metropolialinkki häviää
@@ -27,9 +27,10 @@
 //esimKappaleet[0].innerHTML = 'Eka kappale'; //valitaan taulukosta tietyt osat p.esim
 //esimKappaleet[1].innerHTML = 'Toka kappale';
 
-//!!!TEHTÄVÄ B!!!
 
-let lomakeOK = '';
+//!!!      TEHTÄVÄ B      !!!
+
+let lomakeOK = '';  //muuttuja näkyy jokaisessa paikassa koolidda -> globaali
 
 const checkAttribute = (attr, elements, func) => {
     elements.forEach((el) => {
@@ -41,17 +42,30 @@ const checkAttribute = (attr, elements, func) => {
 
 const checkEmpty = (el) => {
     console.log(el.value);
-    if(el.value === '') {
+    if(el.value === '') {  //jos value-attribuutti on tyhjä...
       el.setAttribute('style', 'border: 1px solid red');   //pakolliset punaiseks
-      lomakeOK += '0';   //
+      lomakeOK += '0';   //lomakeOK lisätään 0 eli  !! lomakeOK = LomakeOK + 0 !!
     } else {
       el.setAttribute('style', '');
-      lomakeOK += '1';
+      lomakeOK += '1';    //lomakeOK = lomakeOK + 1
     }  //tyyli checkEmpty-elementille
 };
 
-const inputElementit = document.querySelectorAll('input');
+const checkPattern = (el) => {                               //kuinka lomakkeen täyttämisen ehto täyttyy
+  const pat = el.getAttribute('pattern');                   //haetaan attribuutit pattern-nimellä ja tulostetaan konsolessa jos tällaisia elementtejä on.
+  //uudemmissa attribuutin nimellä
+  const lauseke = new RegExp(pat, 'i');
+  if(lauseke.exec(el.value)) {
+    console.log('no');
+    el.setAttribute('style', 'border: 1px solid yellow');
+    lomakeOK += '0';
+  }else {
+    el.setAttribute('style', '');
+    lomakeOK += '1';
+  }
+};
 
+const inputElementit = document.querySelectorAll('input');
 
 const lomake = document.querySelector('form');
 
@@ -59,11 +73,12 @@ lomake.addEventListener('submit', (evt) => {         //lomakken lähetykseen tar
   evt.preventDefault();//jos tarkistus ei mene läpi lomakkeen lähetys estetään
   lomakeOK = '';
   checkAttribute('required', inputElementit, checkEmpty);
-    const lauseke = new RegExp('0');
-    console.log(lauseke.exec(lomakeOK));//katsotaan löytyykö 0 jostakin eli  '/0/'
+  checkAttribute('pattern', inputElementit, checkPattern);  //katsotaan kaikista elementeistä löytyykö niistä pattern
+    const lauseke = new RegExp('0');    //regular expression divides a search pattern
+    console.log(lauseke.exec(lomakeOK));//katsotaan löytyykö 0 jostakin eli  '/0/', jos ei tyhjää niin voidaan lähettää
   if (!lauseke.exec(lomakeOK)) {   //exec suorittaa tarkastuksen löytyykö 0, ! = jos ei löydy 0, niin lähetetään
      lomake.submit();
   }
 });                                                 //tapahtuman kuuntelu, ja kutsutaan tapahtuman käsittelijää
                                                 //funktiota käytetään vain tässä tapauksessa, joten sitä ei ole pakko luoda erikseen. Eli () => {}
-
+//tehtiin anonyymi funktio eli funktio jolla ei ole nimeä, vain tässä tapahtumankäsittelijässä

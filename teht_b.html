@@ -8,15 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="normalize.min.css">
-        <link rel="stylesheet" href="main.css">  <!--Teht b-->
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-    <h1>Lomakkeen validointi HTML5</h1>
+    <h1>Lomakkeen validointi HTML5</h1>                         <!--teht b ja c-->
 
-    <form>
+    <form action="lomakePOST.php" method="post">     <!--post-->
         <section class="infokentta"><h3>Info</h3>Täytä pakolliset kentät<span style="color:red;">*</span> huolellisesti, ja paina <b>"Lähetä"</b>, kun olet valmis.</section>
         <br>
         <p class="kentta">Etunimi<span style="color:red;">*</span>:</p>
@@ -26,10 +26,10 @@
         <input class="kentta" type="text" name="sukunimi"  title="Sukunimesi" required/>
 
         <p class="kentta">Sähköposti<span style="color:red;">*</span>:</p>
-        <input class="kentta" type="email" name="sukunimi"  title="Sähköposti" required/>
+        <input class="kentta" type="email" name="sahkoposti"  title="Sähköposti"  required/>
 
         <p class="kentta">Puhelin:</p>
-        <input class="kentta" type="tel" name="sukunimi" placeholder="Esim: +3585052..."  title="Puhelinnumero" />
+        <input class="kentta" type="tel" name="puhelin" placeholder="Esim: +3585052..."  title="Puhelinnumero" />
 
         <p class="kentta">Osoite:</p>
         <input class="kentta" type="text" name="osoite"  title="Osoitteesi" />
@@ -45,6 +45,6 @@
         <br><br>
     </form>
 
-        <script src="main.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

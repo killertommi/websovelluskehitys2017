@@ -12,11 +12,11 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>  <!--teht A-->
+    </head>                                                                 <!--teht a ja c-->
+    <body>
         <h1>Lomakkeen validointi HTML5</h1>
 
-        <form>
+        <form action="lomakeGET.php" method="get">  <!--get-->
             <section class="infokentta"><h3>Info</h3>Täytä pakolliset kentät<span style="color:red;">*</span> huolellisesti, ja paina <b>"Lähetä"</b>, kun olet valmis.</section>
             <br>
             <p class="kentta">Etunimi<span style="color:red;">*</span>:</p>
@@ -26,10 +26,10 @@
             <input class="kentta" type="text" name="sukunimi"  title="Sukunimesi" required/>
 
             <p class="kentta">Sähköposti<span style="color:red;">*</span>:</p>
-            <input class="kentta" type="email" name="sukunimi"  title="Sähköposti" required/>
+            <input class="kentta" type="email" name="sahkoposti"  title="Sähköposti" required/>
 
             <p class="kentta">Puhelin:</p>
-            <input class="kentta" type="tel" name="sukunimi" placeholder="Esim: +3585052..."  title="Puhelinnumero" />
+            <input class="kentta" type="tel" name="puhelin" placeholder="Esim: +3585052..."  pattern="^[0-9]*$" title="Puhelinnumero" />
 
             <p class="kentta">Osoite:</p>
             <input class="kentta" type="text" name="osoite"  title="Osoitteesi" />
@@ -44,6 +44,10 @@
             <input class="laheta" type="submit" value="Lähetä"/>
             <br><br>
         </form>
+
+        <br>
+        <h1>Lomakkeesta tullut data</h1>
+
 
         <script src="js/main.js"></script>
     </body>
