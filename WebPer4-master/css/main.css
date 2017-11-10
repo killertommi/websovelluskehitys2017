@@ -1,0 +1,338 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* tehtävä a:n luokat */
+.punainen {
+    background-color: #c60f13;
+    color: #fff;
+}
+
+.sininen {
+    background-color: #2ba6cb;
+    color: #fff;
+}
+
+.vihrea {
+    background-color: #003300;
+    color: #fff;
+}
+/* tehtävä a päättyy */
+
+.primary-color {
+    background-color: #2ba6cb;
+}
+
+.secondary-color {
+    background-color: #e9e9e9;
+}
+
+.default {
+    background-color: #ffae00;
+}
+
+.alert {
+    background-color: #c60f13;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    background-image: url(http://via.placeholder.com/960x100/000?text=HeaderBGImage);
+    background-position: center;
+    width: 100%;
+}
+
+header h1 {
+    margin:0;
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    line-height: 100px;
+    padding: 0 6em;
+    color: #e9e9e9;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+li {
+    /* width: 33.33%; */
+}
+
+figure {
+    margin: .5em;
+    position: relative;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    display: none;
+}
+
+figure:hover > figcaption {
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.7);
+}
+
+figcaption h3 {
+    margin: 0;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+}
+
+aside {
+    width: 100%;
+}
+
+/*MODAL KUVALLE* teht b*/
+.lightbox {
+    position: absolute; /*vakiona vasen yläreuna*/
+    background-color: rgba(255, 255, 255, 0.8);
+    width:80%;
+    padding: 1rem;
+    margin: 0 0 0 -40%;  /*miinus puolet boxin leveydestä*/
+    left: 50%; /*vasen reuna keskelle */
+    box-sizing: border-box; /*sisemmälle sisällölle*/
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.lightbox img {
+    width:90%;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.lightbox a {
+    right:1rem; /*n. 16 pistettä*/
+    position:absolute;
+    color:#000;
+    font-size:1.5rem;
+    text-decoration: none; /*ei alaviivaa linkkiin*/
+}
+
+.suljeX {
+    font-size: 170%;
+    color: rgba(112, 0, 74, 0.84);
+    text-align:right;
+}
+
+/*.hidden {
+    display: none !important;
+    visibility: hidden;
+} */
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 669px) {
+
+
+    body {
+        max-width: 60em;
+        margin: auto;
+    }
+
+    main {
+        width: 80%;
+    }
+
+    aside {
+        width: 20%;
+    }
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden { /*!!!*/
+    display: none !important;  /*ei varaa tilaa ja on poissa näkyvistä*/
+    visibility: hidden; /*vie tilan, vaikka pois näkyvistä*/
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
