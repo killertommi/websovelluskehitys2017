@@ -1,0 +1,608 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   SIVUN TYYLIT JÄRJESTYKSESSÄ YLHÄÄLTÄ ALAS
+   ========================================================================== */
+
+
+body {    /*koko sivun body flex*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {   /*yläotsikon alue*/
+    background-position: center;
+    width: 100%;
+    background-color: grey;
+}
+
+.header h1 {   /*sivun pääotsikon tyylit*/
+    font-size: 270%;
+    text-align:center;
+    color:white;
+    font-family: arial;
+}
+
+.ylasivuparagraph {  /*pääotsikon alla oleva sivun kuvaus*/
+    color: whitesmoke;
+    font-size: 120%;
+    text-align: center;
+}
+
+
+.loginbutton:hover {  /*kirjautumisnappi, kun hiiri sen yllä*/
+    opacity: 0.8;
+}
+
+main {   /*klikattavien kuvien ja kuvatekstien alue*/
+    max-width:60em;
+    height:100%;
+    background-color: #fafafa;
+    margin: 0 auto;
+}
+
+.kuvalaatikko { /*etusivun kuva ja tiedot laatikon sisällä*/
+    width: 100%;
+    padding:5px;
+    margin: 3px;
+}
+
+.footer {   /*SIVUN ALAOSA (feedback tai upload*/
+    height:30em;
+    background-color: grey;
+    width:100%;
+}
+
+.alasivuotsikko {   /*sivun alaosan otsikoiden tyylit*/
+    color:white;
+    font-size: 160%;
+    text-align: center;
+}
+
+#palautelomake {  /*alasivun palautelomake*/
+    padding:5px;
+    text-align: center;
+    color:black;
+    font-size: 135%;
+    background-color: rgba(153, 153, 153, 0.23);
+    margin: 0 auto;
+    margin-top:20px;
+}
+
+.lahetettypalaute { /*KAIKKI ARVOSTELUT DIVIN SISÄLLÄ index.php-SIVULLA*/
+    height:100%;
+    width:100%;
+    text-align:center;
+}
+
+a.elokuvalinkit {
+    text-decoration: none; /*oletustyyli pois linkeistä jotka johtavat elokuvan modaliin*/
+    color:black;  /*linkkitekstin väri: musta*/
+}
+
+ul {   /*lista jolle kuvat haetaan sivulle näkyviin*/
+    list-style-type: none;  /*jotta listan pisteet eivät näy*/
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+li {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+table, th, td {   /*kommenttien kenttien tyylit*/
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+th {
+    padding: 5px;
+    text-align: left;
+    background-color: rgba(64, 64, 64, 0.13);
+    color:deepskyblue;
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(209, 255, 217, 0.13);
+}
+
+figure {  /*yhden kuvan sijoittelu*/
+    margin: 30px;
+    position: relative;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    display: none;
+}
+
+figure:hover > figcaption {
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.7);
+}
+
+figcaption h3 {
+    margin: 0;
+    text-align: center;
+}
+
+h3.vuosiluku {
+    color: #757575;
+    font-size: 95%;
+}
+
+/*MODAL KUVALLE - KAIKKI MODALIN KENTÄN TYYLIT*/
+.lightbox {
+    position:absolute; /*vakiona vasen yläreuna*/
+    background-color: rgb(255, 255, 255);
+    width:80%;
+    padding: 1rem;
+    margin: 0 0 0 -40%;  /*miinus puolet boxin leveydestä*/
+    left: 50%; /*vasen reuna keskelle */
+    box-sizing: border-box; /*sisemmälle sisällölle*/
+    box-shadow: 60px 0 15px 40px rgba(75, 73, 72, 0.69), -60px 0 8px 40px rgba(75, 73, 72, 0.69);
+}
+
+.lightbox img { /*MODALIN SISÄLLÄ OLEVAN KUVAN TYYLI*/
+    width:40%;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.lightbox a {
+    right:1rem; /*n. 16 pistettä*/
+    position:absolute;
+    color:#000;
+    font-size:1.5rem;
+    text-decoration: none; /*ei alaviivaa linkkiin*/
+}
+
+.suljeX {
+    font-size: 170%;
+    color: rgba(112, 0, 74, 0.84);
+    text-align:right;
+}
+
+
+.arvosteluteksti {
+    height:90px;
+}
+
+input.radionappi1, input.radionappi2, input.radionappi3, input.radionappi4, input.radionappi5 {
+    margin-left: 10px;  /*radiobuttonien (arvosana) sijainti*/
+}
+
+.kommenttinappi {  /*ARVOSTELUN LÄHETYKSEN NAPIN TYYLI*/
+    color:white;
+    font-size: 135%;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    box-shadow: 0px 5px 15px #616161;
+    font-family: verdana;
+    margin-bottom: 25px;
+}
+
+.kaikkiarvostelut {  /*KAIKKIEN KÄYTTÄJIEN ARVOSTELUIDEN KENTTÄ*/
+    padding:15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width:70%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2.kaikkiarvostelut { /*h2-OTSIKOIDEN TYYLIT KAIKKIEN ARVOSTELUJEN KENTÄSSÄ*/
+    color: #5e5f5c;
+    font-family: Verdana;
+    margin-bottom: 35px;
+    text-align: center;
+    padding:10px;
+    background-color: rgba(170, 175, 166, 0.27);
+    border-radius: 15px;
+    margin-top:40px;
+}
+
+p.kaikkiarvostelut {
+    color: #1e1f1c;
+    font-family: Verdana;
+    margin-bottom: 35px;
+    text-align: center;
+    padding:10px;
+    background-color: rgba(170, 175, 166, 0.27);
+    border-radius: 15px;
+    margin-top:40px;
+}
+
+/*.hidden {
+    display: none !important;
+    visibility: hidden;
+} */
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 669px) {
+
+
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    main {
+        width: 100%;
+    }
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden { /*!!!*/
+    display: none !important;  /*ei varaa tilaa ja on poissa näkyvistä*/
+    visibility: hidden; /*vie tilan, vaikka pois näkyvistä*/
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/*LOGIN BUTTONIN TYYLIT*/
+
+/* Full-width input fields */
+input[type=email], input[type=password], input[type=text]  {
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 8px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Extra styles for the register button */
+.regbtn {
+    background-color: #5080f4;
+}
+
+#loginbtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 8px;
+}
+
+#savebtn{
+    background-color: #5080f4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 8px;
+
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 500px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.tiedot {
+    color:black;
+    background-color: rgba(255, 255, 255, 0.89);
+    border-radius: 6px;
+    padding:5px;
+    max-width:300px;
+    text-align: center;
+    margin-bottom:15px;
+    margin: 0 auto;
+}
+
+.buttonpunainen {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    float:right;
+    margin-right: 10px;
+    margin-top:10px;
+    margin-bottom:15px;
+}
+
+.buttonpunainen:hover {
+    opacity:0.8;
+}
+
+.testiarea{
+    max-width:60em;
+    margin: 0 auto;
+}
+
