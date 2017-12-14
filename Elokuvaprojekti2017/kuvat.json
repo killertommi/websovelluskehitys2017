@@ -1,0 +1,62 @@
+[
+    {
+        "mediaID": "71",
+        "mediaTitle": "Review",
+        "mediaType": "image\/jpeg",
+        "mediaOwner": "2",
+        "mediaAlbum": "16",
+        "mediaDate": "2016-11-16 22:47:25",
+        "mediaUrl": "1_img.jpg",
+        "mediaThumb": "1_img.jpg",
+        "kuvaus": "dhdfhdfghdfgh"
+    },
+    {
+        "mediaID": "72",
+        "mediaTitle": "Review",
+        "mediaType": "image\/jpeg",
+        "mediaOwner": "2",
+        "mediaAlbum": "16",
+        "mediaDate": "2016-11-16 22:47:48",
+        "mediaUrl": "2_img.jpg",
+        "mediaThumb": "2_img.jpg"
+    },
+    {
+        "mediaID": "73",
+        "mediaTitle": "Review",
+        "mediaType": "image\/jpeg",
+        "mediaOwner": "2",
+        "mediaAlbum": "17",
+        "mediaDate": "2016-11-16 22:50:59",
+        "mediaUrl": "3_img.jpg",
+        "mediaThumb": "3_img.jpg"
+    },
+    {
+        "mediaID": "74",
+        "mediaTitle": "Review",
+        "mediaType": "image\/jpeg",
+        "mediaOwner": "2",
+        "mediaAlbum": "17",
+        "mediaDate": "2016-11-16 22:51:23",
+        "mediaUrl": "4_img.jpg",
+        "mediaThumb": "4_img.jpg"
+    },
+    {
+        "mediaID": "75",
+        "mediaTitle": "Review",
+        "mediaType": "image\/jpeg",
+        "mediaOwner": "2",
+        "mediaAlbum": "17",
+        "mediaDate": "2016-11-16 22:51:52",
+        "mediaUrl": "5_img.jpg",
+        "mediaThumb": "5_img.jpg"
+    },
+    {
+        "mediaID": "76",
+        "mediaTitle": "Review",
+        "mediaType": "image\/jpeg",
+        "mediaOwner": "2",
+        "mediaAlbum": "16",
+        "mediaDate": "2016-11-16 22:52:14",
+        "mediaUrl": "6_img.jpg",
+        "mediaThumb": "6_img.jpg"
+    }]
