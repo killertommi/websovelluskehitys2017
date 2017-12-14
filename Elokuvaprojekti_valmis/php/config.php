@@ -10,8 +10,8 @@ session_start();
 //yhteyden muodostus tietokantaan
 
 //Tietokanta
-$user = 'tommilag';		//Käytäjänimi
-$pass = 'mandariini85';
+$user = 'XXXXXXXX';		//Käytäjänimi
+$pass = 'XXXXXXXX';
 $host = 'mysql.metropolia.fi';  //Tietokantapalvelin
 $dbname = 'tommilag';		//Tietokanta
 // Muodostetaan yhteys tietokantaan
